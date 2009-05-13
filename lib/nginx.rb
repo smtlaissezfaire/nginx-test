@@ -1,5 +1,11 @@
 module Nginx
   module Test
+    MAJOR = 0
+    MINOR = 0
+    TINY  = 1
+    
+    VERSION_STRING = "#{MAJOR}.#{MINOR}.#{TINY}"
+    
     def server
       @server || "http://localhost:4000"
     end
