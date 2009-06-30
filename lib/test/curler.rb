@@ -36,6 +36,10 @@ module Nginx
           @output.is_a?(Net::HTTPRedirection)
         end
 
+        def found?
+          !@output.is_a?(Net::HTTPNotFound)
+        end
+
         def permanent_redirect?
           @output.is_a?(Net::HTTPMovedPermanently)
         end
